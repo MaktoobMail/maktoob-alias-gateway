@@ -2,7 +2,6 @@
 import React from 'react';
 import NavBar from '@/components/NavBar';
 import Hero from '@/components/Hero';
-import CTASection from '@/components/CTASection';
 import Footer from '@/components/Footer';
 
 const Index = () => {
@@ -11,7 +10,6 @@ const Index = () => {
       <NavBar />
       <main className="flex-1">
         <Hero />
-        <CTASection />
       </main>
       <Footer />
     </div>
