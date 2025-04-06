@@ -69,7 +69,10 @@ const AliasCreationForm = ({ className = "" }: { className?: string }) => {
           <label htmlFor="alias" className="text-sm font-medium mb-2">
             {t("اسم المستخدم", "Username")}
           </label>
-          <div className="flex flex-row-reverse rounded-md border border-gray-300 overflow-hidden">
+          <div className="flex rounded-md border border-gray-300 overflow-hidden">
+            <div className="flex items-center px-3 bg-gray-100 border-r border-gray-300">
+              @maktoob.me
+            </div>
             <Input
               id="alias"
               type="text"
@@ -80,9 +83,6 @@ const AliasCreationForm = ({ className = "" }: { className?: string }) => {
               aria-label={t("اسم المستخدم", "Username")}
               disabled={isSubmitting}
             />
-            <div className="flex items-center px-3 bg-gray-100 border-r border-gray-300">
-              @maktoob.me
-            </div>
           </div>
           {aliasError && <p className="text-sm text-red-500 mt-1">{aliasError}</p>}
         </div>
