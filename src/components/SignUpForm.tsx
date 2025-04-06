@@ -48,7 +48,7 @@ const SignUpForm = ({ className = "" }: { className?: string }) => {
         <div className="flex-1">
           <Input
             type="email"
-            placeholder={t("البريد الإلكتروني أو الهاتف", "Email or phone")}
+            placeholder={t("البريد الإلكتروني", "Email")}
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             className="h-12 text-base border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500"
