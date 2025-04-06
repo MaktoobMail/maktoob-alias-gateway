@@ -21,22 +21,10 @@ const Hero = () => {
           <h1 className="text-2xl font-medium text-gray-800 mb-2">
             {t("تسجيل الدخول", "Sign in")}
           </h1>
-          <p className="text-gray-600">
-            {t("للمتابعة إلى مكتوب.مي", "to continue to Maktoob.me")}
-          </p>
         </div>
         
         <div className="mb-6">
           <SignUpForm className="animate-fade-in" />
-        </div>
-        
-        <div className="text-sm text-gray-600 mt-8">
-          <p className="mb-2">
-            {t("ليس جهازك؟ استخدم وضع التصفح الخاص.", "Not your computer? Use Guest mode.")}
-          </p>
-          <a href="#" className="text-blue-600 hover:text-blue-800">
-            {t("تعرف على المزيد حول استخدام وضع الضيف", "Learn more about using Guest mode")}
-          </a>
         </div>
         
         <div className="flex justify-between mt-6">
