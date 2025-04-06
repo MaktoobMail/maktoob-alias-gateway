@@ -9,9 +9,11 @@ const Index = () => {
   
   return (
     <div className="min-h-screen flex flex-col bg-gray-100" dir={language === 'ar' ? 'rtl' : 'ltr'}>
-      <main className="flex-1">
-        <Hero />
-      </main>
+      <div className="flex-1">
+        <main className="flex-1">
+          <Hero />
+        </main>
+      </div>
       <Footer />
     </div>
   );

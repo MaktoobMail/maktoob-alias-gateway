@@ -1,7 +1,6 @@
 
 import React from 'react';
 import SignUpForm from './SignUpForm';
-import { Mail } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const Hero = () => {
@@ -11,9 +10,11 @@ const Hero = () => {
     <section className="bg-gray-100 min-h-screen flex items-center justify-center py-12 px-4" dir={language === 'ar' ? 'rtl' : 'ltr'}>
       <div className="bg-white rounded-lg shadow-md p-8 w-full max-w-md">
         <div className="flex justify-center mb-6">
-          <div className="flex items-center justify-center w-10 h-10 text-brand-secondary">
-            <Mail size={32} />
-          </div>
+          <img 
+            src="/lovable-uploads/bfa5760f-db8b-45c4-b567-748926edadc7.png" 
+            alt="Maktoob Logo" 
+            className="h-16 w-auto"
+          />
         </div>
         
         <div className="text-center mb-8">
