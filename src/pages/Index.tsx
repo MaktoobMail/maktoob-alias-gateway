@@ -1,13 +1,11 @@
 
 import React from 'react';
-import NavBar from '@/components/NavBar';
 import Hero from '@/components/Hero';
 import Footer from '@/components/Footer';
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex flex-col">
-      <NavBar />
+    <div className="min-h-screen flex flex-col bg-gray-100">
       <main className="flex-1">
         <Hero />
       </main>

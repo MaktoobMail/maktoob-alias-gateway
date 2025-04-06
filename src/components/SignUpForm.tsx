@@ -1,6 +1,5 @@
 
 import React, { useState } from 'react';
-import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { toast } from "sonner";
 import { z } from "zod";
@@ -27,7 +26,7 @@ const SignUpForm = ({ className = "" }: { className?: string }) => {
       console.log("Submitted email:", email);
       setEmail("");
       setIsSubmitting(false);
-      toast.success("Thank you for signing up! We'll be in touch soon.");
+      toast.success("Verification email sent. Please check your inbox.");
     } catch (err) {
       if (err instanceof z.ZodError) {
         setError(err.errors[0].message);
@@ -39,26 +38,24 @@ const SignUpForm = ({ className = "" }: { className?: string }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className={`${className} w-full max-w-md`}>
-      <div className="flex flex-col sm:flex-row gap-2 w-full">
+    <form onSubmit={handleSubmit} className={`${className} w-full`}>
+      <div className="flex flex-col gap-1 w-full">
         <div className="flex-1">
           <Input
             type="email"
-            placeholder="Your email address"
+            placeholder="Email or phone"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="h-12 text-base"
+            className="h-12 text-base border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500"
             aria-label="Email"
           />
           {error && <p className="text-sm text-red-500 mt-1">{error}</p>}
         </div>
-        <Button 
-          type="submit" 
-          className="bg-brand-secondary hover:bg-brand-secondary/90 text-white h-12 px-6"
-          disabled={isSubmitting}
-        >
-          {isSubmitting ? "Signing up..." : "Get Early Access"}
-        </Button>
+        <div className="text-left mt-1">
+          <a href="#" className="text-blue-600 hover:text-blue-800 text-sm font-medium">
+            Forgot email?
+          </a>
+        </div>
       </div>
     </form>
   );
