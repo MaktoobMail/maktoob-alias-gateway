@@ -15,10 +15,10 @@ const Hero = () => {
         
         <div className="text-center mb-8">
           <h1 className="text-2xl font-medium text-gray-800 mb-2">
-            Sign in
+            تسجيل الدخول
           </h1>
           <p className="text-gray-600">
-            to continue to Maktoob.me
+            للمتابعة إلى مكتوب.مي
           </p>
         </div>
         
@@ -28,19 +28,19 @@ const Hero = () => {
         
         <div className="text-sm text-gray-600 mt-8">
           <p className="mb-2">
-            Not your computer? Use Private Browsing mode.
+            ليس جهازك؟ استخدم وضع التصفح الخاص.
           </p>
           <a href="#" className="text-blue-600 hover:text-blue-800">
-            Learn more about using Guest mode
+            تعرف على المزيد حول استخدام وضع الضيف
           </a>
         </div>
         
         <div className="flex justify-between mt-6">
           <a href="#" className="text-blue-600 hover:text-blue-800 text-sm">
-            Create account
+            إنشاء حساب
           </a>
           <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-md text-sm">
-            Next
+            التالي
           </button>
         </div>
       </div>

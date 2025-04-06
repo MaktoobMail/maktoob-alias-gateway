@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { toast } from "sonner";
 import { z } from "zod";
 
-const emailSchema = z.string().email("Please enter a valid email address");
+const emailSchema = z.string().email("يرجى إدخال عنوان بريد إلكتروني صالح");
 
 const SignUpForm = ({ className = "" }: { className?: string }) => {
   const [email, setEmail] = useState("");
@@ -26,12 +26,12 @@ const SignUpForm = ({ className = "" }: { className?: string }) => {
       console.log("Submitted email:", email);
       setEmail("");
       setIsSubmitting(false);
-      toast.success("Verification email sent. Please check your inbox.");
+      toast.success("تم إرسال بريد التحقق. يرجى التحقق من صندوق الوارد الخاص بك.");
     } catch (err) {
       if (err instanceof z.ZodError) {
         setError(err.errors[0].message);
       } else {
-        setError("An error occurred. Please try again.");
+        setError("حدث خطأ. يرجى المحاولة مرة أخرى.");
       }
       setIsSubmitting(false);
     }
@@ -43,17 +43,17 @@ const SignUpForm = ({ className = "" }: { className?: string }) => {
         <div className="flex-1">
           <Input
             type="email"
-            placeholder="Email or phone"
+            placeholder="البريد الإلكتروني أو الهاتف"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             className="h-12 text-base border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500"
-            aria-label="Email"
+            aria-label="البريد الإلكتروني"
           />
           {error && <p className="text-sm text-red-500 mt-1">{error}</p>}
         </div>
         <div className="text-left mt-1">
           <a href="#" className="text-blue-600 hover:text-blue-800 text-sm font-medium">
-            Forgot email?
+            نسيت البريد الإلكتروني؟
           </a>
         </div>
       </div>

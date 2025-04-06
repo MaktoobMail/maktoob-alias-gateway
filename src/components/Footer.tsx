@@ -7,13 +7,13 @@ const Footer = () => {
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center text-sm text-gray-600">
         <div>
           <select className="bg-transparent border-none text-gray-600 focus:outline-none">
-            <option>English (United States)</option>
+            <option>العربية</option>
           </select>
         </div>
         <div className="flex space-x-6 mt-3 md:mt-0">
-          <a href="#" className="hover:text-gray-800">Help</a>
-          <a href="#" className="hover:text-gray-800">Privacy</a>
-          <a href="#" className="hover:text-gray-800">Terms</a>
+          <a href="#" className="hover:text-gray-800">المساعدة</a>
+          <a href="#" className="hover:text-gray-800">الخصوصية</a>
+          <a href="#" className="hover:text-gray-800">البنود</a>
         </div>
       </div>
     </footer>
