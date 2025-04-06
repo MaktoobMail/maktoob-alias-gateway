@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
 import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 import { z } from "zod";
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -44,23 +45,40 @@ const SignUpForm = ({ className = "" }: { className?: string }) => {
 
   return (
     <form onSubmit={handleSubmit} className={`${className} w-full`}>
-      <div className="flex flex-col gap-1 w-full">
-        <div className="flex-1">
-          <Input
-            type="email"
-            placeholder={t("البريد الإلكتروني", "Email")}
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            className="h-12 text-base border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500"
-            aria-label={t("البريد الإلكتروني", "Email")}
-          />
-          {error && <p className="text-sm text-red-500 mt-1">{error}</p>}
+      <div className="flex flex-col gap-4 w-full">
+        <div className="flex flex-col gap-1 w-full">
+          <div className="flex-1">
+            <label htmlFor="email" className="text-sm font-medium">
+              {t("البريد الإلكتروني", "Email")}
+            </label>
+            <Input
+              id="email"
+              type="email"
+              placeholder={t("البريد الإلكتروني", "Email")}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="h-12 text-base border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500"
+              aria-label={t("البريد الإلكتروني", "Email")}
+              disabled={isSubmitting}
+            />
+            {error && <p className="text-sm text-red-500 mt-1">{error}</p>}
+          </div>
+          <div className={`mt-1 ${language === 'ar' ? 'text-right' : 'text-left'}`}>
+            <a href="#" className="text-blue-600 hover:text-blue-800 text-sm font-medium">
+              {t("نسيت البريد الإلكتروني؟", "Forgot email?")}
+            </a>
+          </div>
         </div>
-        <div className={`mt-1 ${language === 'ar' ? 'text-right' : 'text-left'}`}>
-          <a href="#" className="text-blue-600 hover:text-blue-800 text-sm font-medium">
-            {t("نسيت البريد الإلكتروني؟", "Forgot email?")}
-          </a>
-        </div>
+
+        <Button 
+          type="submit" 
+          className="h-12 text-base"
+          disabled={isSubmitting}
+        >
+          {isSubmitting 
+            ? t("جاري الإرسال...", "Sending...") 
+            : t("تسجيل الدخول", "Sign in")}
+        </Button>
       </div>
     </form>
   );
