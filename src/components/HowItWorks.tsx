@@ -1,21 +1,21 @@
 
 import React from 'react';
-import { Check, Mail, Shield, ChevronRight } from 'lucide-react';
+import { Mail, Shield, Check, ChevronRight } from 'lucide-react';
 
 const steps = [
   {
     title: "Sign Up",
-    description: "Create an account with your primary email address",
+    description: "Create your Maktoob.me email account",
     icon: <Mail className="h-8 w-8" />
   },
   {
-    title: "Generate Alias",
-    description: "Get a random email alias @maktoob.me",
+    title: "Get Premium Features",
+    description: "Early access users receive bonus features",
     icon: <Shield className="h-8 w-8" />
   },
   {
-    title: "Use Anywhere",
-    description: "Use your alias instead of your real email",
+    title: "Enjoy Modern Email",
+    description: "Experience email with built-in privacy",
     icon: <Check className="h-8 w-8" />
   }
 ];
@@ -27,7 +27,7 @@ const HowItWorks = () => {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-brand-primary mb-4">How It Works</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Protecting your email privacy has never been easier
+            Getting started with your new email service is simple
           </p>
         </div>
         
@@ -53,10 +53,10 @@ const HowItWorks = () => {
         
         <div className="mt-12 text-center">
           <p className="text-brand-primary font-medium mb-6">
-            All emails sent to your alias are automatically forwarded to your primary inbox
+            Early access users receive special bonus features including email aliases
           </p>
           <div className="inline-flex items-center justify-center p-2 bg-brand-primary/10 text-brand-primary rounded-lg">
-            <code className="font-mono text-sm">random-alias@maktoob.me → your.real.email@example.com</code>
+            <code className="font-mono text-sm">your-name@maktoob.me + bonus aliases for early adopters</code>
           </div>
         </div>
       </div>

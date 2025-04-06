@@ -6,34 +6,34 @@ import { Shield, RefreshCw, Zap, Lock, Ban, BarChart } from 'lucide-react';
 const Features = () => {
   const features = [
     {
-      icon: <Shield />,
-      title: "Privacy Protection",
-      description: "Shield your real email address from spam, tracking, and data breaches."
-    },
-    {
-      icon: <RefreshCw />,
-      title: "Email Forwarding",
-      description: "All emails sent to your alias are automatically forwarded to your primary inbox."
+      icon: <Lock />,
+      title: "Secure Email",
+      description: "Enterprise-grade security to keep your communications private and safe."
     },
     {
       icon: <Zap />,
-      title: "Instant Generation",
-      description: "Create new email aliases instantly whenever you need them."
+      title: "Lightning Fast",
+      description: "Optimized infrastructure for quick message delivery and responsive interface."
     },
     {
-      icon: <Lock />,
-      title: "Secure by Design",
-      description: "Built with security as a priority using AWS SES verified domains."
+      icon: <Shield />,
+      title: "Privacy Features",
+      description: "Built-in privacy tools including email aliases for early adopters."
     },
     {
-      icon: <Ban />,
-      title: "Disable Anytime",
-      description: "Easily disable any alias that starts receiving unwanted messages."
+      icon: <RefreshCw />,
+      title: "Smart Organization",
+      description: "Advanced filtering and organization to keep your inbox tidy."
     },
     {
       icon: <BarChart />,
       title: "Usage Insights",
-      description: "See which aliases are receiving emails and how often."
+      description: "Understand your email habits with helpful analytics and suggestions."
+    },
+    {
+      icon: <Ban />,
+      title: "Spam Protection",
+      description: "Intelligent filtering to keep unwanted messages out of your inbox."
     }
   ];
 
@@ -43,7 +43,7 @@ const Features = () => {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-brand-primary mb-4">Features</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Everything you need to take control of your inbox
+            Modern email for the privacy-conscious user
           </p>
         </div>
         

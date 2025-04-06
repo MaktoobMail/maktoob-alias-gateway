@@ -8,11 +8,11 @@ const Hero = () => {
       <div className="container mx-auto">
         <div className="max-w-3xl mx-auto text-center animate-fade-in">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            Protect Your Inbox with Email Aliases
+            Modern Email for Everyone
           </h1>
           <p className="text-xl md:text-2xl text-brand-light mb-8">
-            Generate unlimited email aliases. Keep your real email private. 
-            All messages forwarded to your inbox.
+            A fresh approach to email with built-in privacy features.
+            Sign up for early access and get email aliases as a bonus.
           </p>
           
           <div className="flex justify-center mb-8">
@@ -21,7 +21,7 @@ const Hero = () => {
           
           <div className="text-center">
             <p className="text-brand-light/80 text-sm">
-              🎁 Early adopters get free alias generation and forwarding forever!
+              🎁 Early adopters get premium features including unlimited email aliases forever!
             </p>
           </div>
         </div>

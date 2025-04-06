@@ -13,8 +13,8 @@ const Footer = () => {
               Maktoob<span className="text-brand-secondary">.me</span>
             </h2>
             <p className="text-brand-light/80 max-w-md">
-              Secure email alias generation and forwarding service. 
-              Take control of your inbox and protect your privacy.
+              A modern email provider with built-in privacy features.
+              Join our early access program to experience the future of email.
             </p>
           </div>
         </div>
