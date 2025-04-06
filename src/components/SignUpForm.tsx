@@ -3,13 +3,15 @@ import React, { useState } from 'react';
 import { Input } from "@/components/ui/input";
 import { toast } from "sonner";
 import { z } from "zod";
+import { useLanguage } from '@/contexts/LanguageContext';
 
-const emailSchema = z.string().email("يرجى إدخال عنوان بريد إلكتروني صالح");
+const emailSchema = z.string().email();
 
 const SignUpForm = ({ className = "" }: { className?: string }) => {
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState("");
+  const { language, t } = useLanguage();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -26,12 +28,15 @@ const SignUpForm = ({ className = "" }: { className?: string }) => {
       console.log("Submitted email:", email);
       setEmail("");
       setIsSubmitting(false);
-      toast.success("تم إرسال بريد التحقق. يرجى التحقق من صندوق الوارد الخاص بك.");
+      toast.success(
+        t("تم إرسال بريد التحقق. يرجى التحقق من صندوق الوارد الخاص بك.", 
+          "Verification email sent. Please check your inbox.")
+      );
     } catch (err) {
       if (err instanceof z.ZodError) {
-        setError(err.errors[0].message);
+        setError(t("يرجى إدخال عنوان بريد إلكتروني صالح", "Please enter a valid email address"));
       } else {
-        setError("حدث خطأ. يرجى المحاولة مرة أخرى.");
+        setError(t("حدث خطأ. يرجى المحاولة مرة أخرى.", "An error occurred. Please try again."));
       }
       setIsSubmitting(false);
     }
@@ -43,17 +48,17 @@ const SignUpForm = ({ className = "" }: { className?: string }) => {
         <div className="flex-1">
           <Input
             type="email"
-            placeholder="البريد الإلكتروني أو الهاتف"
+            placeholder={t("البريد الإلكتروني أو الهاتف", "Email or phone")}
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             className="h-12 text-base border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500"
-            aria-label="البريد الإلكتروني"
+            aria-label={t("البريد الإلكتروني", "Email")}
           />
           {error && <p className="text-sm text-red-500 mt-1">{error}</p>}
         </div>
-        <div className="text-left mt-1">
+        <div className={`mt-1 ${language === 'ar' ? 'text-right' : 'text-left'}`}>
           <a href="#" className="text-blue-600 hover:text-blue-800 text-sm font-medium">
-            نسيت البريد الإلكتروني؟
+            {t("نسيت البريد الإلكتروني؟", "Forgot email?")}
           </a>
         </div>
       </div>
