@@ -13,18 +13,6 @@ const NavBar = () => {
           </h1>
         </div>
         
-        <nav className="hidden md:flex space-x-6 items-center">
-          <a href="#features" className="text-muted-foreground hover:text-foreground transition-colors">
-            Features
-          </a>
-          <a href="#how-it-works" className="text-muted-foreground hover:text-foreground transition-colors">
-            How It Works
-          </a>
-          <a href="#faq" className="text-muted-foreground hover:text-foreground transition-colors">
-            FAQ
-          </a>
-        </nav>
-        
         <div>
           <Button 
             className="bg-brand-primary hover:bg-brand-primary/90 text-white"
