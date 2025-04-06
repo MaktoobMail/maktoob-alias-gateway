@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { Language } from 'lucide-react';
+import { Languages } from 'lucide-react';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
 const Footer = () => {
@@ -17,7 +17,7 @@ const Footer = () => {
           >
             <SelectTrigger className="bg-transparent border-none text-gray-600 focus:outline-none">
               <div className="flex items-center">
-                <Language className="mr-2 h-4 w-4" />
+                <Languages className="mr-2 h-4 w-4" />
                 <SelectValue />
               </div>
             </SelectTrigger>
