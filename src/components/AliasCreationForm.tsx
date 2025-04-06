@@ -64,23 +64,23 @@ const AliasCreationForm = ({ className = "" }: { className?: string }) => {
 
   return (
     <form onSubmit={handleSubmit} className={`${className} w-full`}>
-      <div className="flex flex-col gap-4 w-full">
+      <div className="flex flex-col gap-6 w-full">
         <div className="flex flex-col gap-1">
-          <label htmlFor="alias" className="text-sm font-medium">
+          <label htmlFor="alias" className="text-sm font-medium mb-2">
             {t("اسم المستخدم", "Username")}
           </label>
-          <div className="flex items-center">
+          <div className="flex flex-row-reverse rounded-md border border-gray-300 overflow-hidden">
             <Input
               id="alias"
               type="text"
               placeholder={t("اسم المستخدم", "username")}
               value={alias}
               onChange={(e) => setAlias(e.target.value)}
-              className="h-12 text-base border rounded-l-md border-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500"
+              className="h-12 text-base border-0 rounded-none focus:ring-0"
               aria-label={t("اسم المستخدم", "Username")}
               disabled={isSubmitting}
             />
-            <div className="h-12 px-3 flex items-center bg-gray-100 border border-l-0 border-gray-300 rounded-r-md">
+            <div className="flex items-center px-3 bg-gray-100 border-r border-gray-300">
               @maktoob.me
             </div>
           </div>
@@ -88,7 +88,7 @@ const AliasCreationForm = ({ className = "" }: { className?: string }) => {
         </div>
         
         <div className="flex flex-col gap-1">
-          <label htmlFor="forwardingEmail" className="text-sm font-medium">
+          <label htmlFor="forwardingEmail" className="text-sm font-medium mb-2">
             {t("توجيه إلى", "Forward to")}
           </label>
           <Input
@@ -106,7 +106,7 @@ const AliasCreationForm = ({ className = "" }: { className?: string }) => {
         
         <Button 
           type="submit" 
-          className="h-12 text-base"
+          className="h-12 text-base bg-blue-900 hover:bg-blue-800 mt-4"
           disabled={isSubmitting}
         >
           {isSubmitting 
